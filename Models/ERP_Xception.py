@@ -391,91 +391,18 @@ def train_ch5(net, train_iter, test_iter, optimizer, device, num_epochs, erp, er
     if best_model_state_dict is not None:  # Save the state dict of the best model to a file
         torch.save(best_model_state_dict, erp+"_best_model.pt")
 
-erp="N400"
-erp_type="bini"
-batch_size = 64
-net = CascadeModel().to(device)
-train_data = Dataset_train(transform=transforms.ToTensor(),
-                               allpath="F:\\研究生文件\\小论文2相关资料\\开源代码\\第二篇小论文+大论文相关内容\\DataProgress\\输出平均数据_gpt优化\\" + erp + "输出数据\\" + erp_type + "\\按列为时间步\\k2\\")
-test_data = Dataset_test(transform=transforms.ToTensor(),
-                             allpath="F:\\研究生文件\\小论文2相关资料\\开源代码\\第二篇小论文+大论文相关内容\\DataProgress\\输出平均数据_gpt优化\\" + erp + "输出数据\\" + erp_type + "\\按列为时间步\\k2\\")
-train_iter = DataLoader(dataset=train_data, batch_size=batch_size, shuffle=True, num_workers=0)
-test_iter = DataLoader(dataset=test_data, batch_size=batch_size, shuffle=False, num_workers=0)
-lr, num_epochs = 0.01, 100
-optimizer = torch.optim.Adam(net.parameters(), lr=lr)
-train_ch5(net, train_iter, test_iter, optimizer, device, num_epochs, erp, erp_type)
-"""
-
-erp="P3"
-erp_type="bini"
-batch_size = 64
-net = CascadeModel().to(device)
-train_data = Dataset_train(transform=transforms.ToTensor(),
-                               allpath="F:\\研究生文件\\小论文2相关资料\\开源代码\\第二篇小论文+大论文相关内容\\DataProgress\\输出平均数据_gpt优化\\" + erp + "输出数据\\" + erp_type + "\\按列为时间步\\k1\\")
-test_data = Dataset_test(transform=transforms.ToTensor(),
-                             allpath="F:\\研究生文件\\小论文2相关资料\\开源代码\\第二篇小论文+大论文相关内容\\DataProgress\\输出平均数据_gpt优化\\" + erp + "输出数据\\" + erp_type + "\\按列为时间步\\k1\\")
-train_iter = DataLoader(dataset=train_data, batch_size=batch_size, shuffle=True, num_workers=0)
-test_iter = DataLoader(dataset=test_data, batch_size=batch_size, shuffle=False, num_workers=0)
-lr, num_epochs = 0.01, 100
-optimizer = torch.optim.Adam(net.parameters(), lr=lr)
-train_ch5(net, train_iter, test_iter, optimizer, device, num_epochs, erp, erp_type)
-
-erp="N2PC"
-erp_type="bini"
-batch_size = 64
-net = CascadeModel().to(device)
-train_data = Dataset_train(transform=transforms.ToTensor(),
-                               allpath="F:\\研究生文件\\小论文2相关资料\\开源代码\\第二篇小论文+大论文相关内容\\DataProgress\\输出平均数据_gpt优化\\" + erp + "输出数据\\" + erp_type + "\\按列为时间步\\k1\\")
-test_data = Dataset_test(transform=transforms.ToTensor(),
-                             allpath="F:\\研究生文件\\小论文2相关资料\\开源代码\\第二篇小论文+大论文相关内容\\DataProgress\\输出平均数据_gpt优化\\" + erp + "输出数据\\" + erp_type + "\\按列为时间步\\k1\\")
-train_iter = DataLoader(dataset=train_data, batch_size=batch_size, shuffle=True, num_workers=0)
-test_iter = DataLoader(dataset=test_data, batch_size=batch_size, shuffle=False, num_workers=0)
-lr, num_epochs = 0.01, 100
-optimizer = torch.optim.Adam(net.parameters(), lr=lr)
-train_ch5(net, train_iter, test_iter, optimizer, device, num_epochs, erp, erp_type)
-
-erp="LRP"
-erp_type="bini"
-batch_size = 64
-net = CascadeModel().to(device)
-train_data = Dataset_train(transform=transforms.ToTensor(),
-                               allpath="F:\\研究生文件\\小论文2相关资料\\开源代码\\第二篇小论文+大论文相关内容\\DataProgress\\输出平均数据_gpt优化\\" + erp + "输出数据\\" + erp_type + "\\按列为时间步\\k1\\")
-test_data = Dataset_test(transform=transforms.ToTensor(),
-                             allpath="F:\\研究生文件\\小论文2相关资料\\开源代码\\第二篇小论文+大论文相关内容\\DataProgress\\输出平均数据_gpt优化\\" + erp + "输出数据\\" + erp_type + "\\按列为时间步\\k1\\")
-train_iter = DataLoader(dataset=train_data, batch_size=batch_size, shuffle=True, num_workers=0)
-test_iter = DataLoader(dataset=test_data, batch_size=batch_size, shuffle=False, num_workers=0)
-lr, num_epochs = 0.01, 100
-optimizer = torch.optim.Adam(net.parameters(), lr=lr)
-train_ch5(net, train_iter, test_iter, optimizer, device, num_epochs, erp, erp_type)
-
-
 
 erp="N170"
 erp_type="bini"
 batch_size = 64
 net = CascadeModel().to(device)
 train_data = Dataset_train(transform=transforms.ToTensor(),
-                               allpath="F:\\研究生文件\\小论文2相关资料\\开源代码\\第二篇小论文+大论文相关内容\\DataProgress\\输出平均数据_gpt优化\\" + erp + "输出数据\\" + erp_type + "\\按列为时间步\\k1\\")
+                               allpath="F:\\DataProgress\\输出平均数据\\" + erp + "输出数据\\" + erp_type + "\\按列为时间步\\k1\\")
 test_data = Dataset_test(transform=transforms.ToTensor(),
-                             allpath="F:\\研究生文件\\小论文2相关资料\\开源代码\\第二篇小论文+大论文相关内容\\DataProgress\\输出平均数据_gpt优化\\" + erp + "输出数据\\" + erp_type + "\\按列为时间步\\k1\\")
+                             allpath="F:\\DataProgress\\输出平均数据\\" + erp + "输出数据\\" + erp_type + "\\按列为时间步\\k1\\")
 train_iter = DataLoader(dataset=train_data, batch_size=batch_size, shuffle=True, num_workers=0)
 test_iter = DataLoader(dataset=test_data, batch_size=batch_size, shuffle=False, num_workers=0)
 lr, num_epochs = 0.01, 100
 optimizer = torch.optim.Adam(net.parameters(), lr=lr)
 train_ch5(net, train_iter, test_iter, optimizer, device, num_epochs, erp, erp_type)
 
-erp="ERN"
-erp_type="binlabel"
-batch_size = 64
-net = CascadeModel().to(device)
-train_data = Dataset_train(transform=transforms.ToTensor(),
-                               allpath="F:\\研究生文件\\小论文2相关资料\\开源代码\\第二篇小论文+大论文相关内容\\DataProgress\\输出平均数据_gpt优化\\" + erp + "输出数据\\" + erp_type + "\\按列为时间步\\k1\\")
-test_data = Dataset_test(transform=transforms.ToTensor(),
-                             allpath="F:\\研究生文件\\小论文2相关资料\\开源代码\\第二篇小论文+大论文相关内容\\DataProgress\\输出平均数据_gpt优化\\" + erp + "输出数据\\" + erp_type + "\\按列为时间步\\k1\\")
-train_iter = DataLoader(dataset=train_data, batch_size=batch_size, shuffle=True, num_workers=0)
-test_iter = DataLoader(dataset=test_data, batch_size=batch_size, shuffle=False, num_workers=0)
-lr, num_epochs = 0.01, 100
-optimizer = torch.optim.Adam(net.parameters(), lr=lr)
-train_ch5(net, train_iter, test_iter, optimizer, device, num_epochs, erp, erp_type)
-
-"""
