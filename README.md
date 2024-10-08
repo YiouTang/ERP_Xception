@@ -2,7 +2,7 @@
 
 ## Overview
 This project introduces the ERP-Xception model, a novel architecture that integrates channel attention mechanisms with depthwise separable convolutions. The model innovatively combines an enhanced ECA (Efficient Channel Attention) module with an optimized Xception structure and incorporates the ShiftVIT feature translation mechanism. The goal is to achieve high-quality feature extraction that captures the inter-channel interactions and temporal domain position information of EEG signals. Empirical results on the public ERP-CORE dataset demonstrate the model's efficient classification performance across six types of EEG signal components.
-
+![替代文本](https://github.com/YiouTang/ERP_Xception/blob/main/images/git_title.png?raw=true) "可选的标题文本")
 ## Project Structure
 The project is organized into three main directories:
 
